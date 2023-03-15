@@ -12,19 +12,19 @@ class Solution {
         }
         // 11, 01
         String answer = "";
-        int count = 0;
+        int carry = 0;
         for (int i = a.length()-1; i >= 0; i--) {
             int int_a = a.charAt(i) - '0';
             int int_b = b.charAt(i) - '0';
-            answer = (int_a + int_b + count) % 2 + answer;
-            if (int_a + int_b + count > 1) {
-                count = 1;
+            answer = (int_a + int_b + carry) % 2 + answer;
+            if (int_a + int_b + carry > 1) {
+                carry = 1;
             } else {
-                count = 0;
+                carry = 0;
             }
         }
-        if (count == 1) {
-            answer = count + answer;
+        if (carry == 1) {
+            answer = carry + answer;
         }
         return answer;
     }
