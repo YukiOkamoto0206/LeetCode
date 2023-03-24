@@ -6,7 +6,7 @@ class Solution {
             List<Integer> cur = new ArrayList<>();
             cur.add(0);
             cur.addAll(prev);
-            prev.add(0);
+            // prev.add(0);
             for (int i = 0; i < prev.size(); i++) {
                 cur.set(i, prev.get(i)+cur.get(i));
             }
